@@ -17,10 +17,10 @@ RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get install -y nodejs
 WORKDIR /src
-COPY ["DotNetCoreReactAdmin-dotnet7/DotNetCoreReactAdmin-dotnet7.csproj", "DotNetCoreReactAdmin-dotnet7/"]
-RUN dotnet restore "DotNetCoreReactAdmin-dotnet7/DotNetCoreReactAdmin-dotnet7.csproj"
+COPY ["DotNetCoreReactAdmin-dotnet7.csproj", ""]
+RUN dotnet restore "DotNetCoreReactAdmin-dotnet7.csproj"
 COPY . .
-WORKDIR "/src/DotNetCoreReactAdmin-dotnet7"
+WORKDIR /src
 RUN dotnet build "DotNetCoreReactAdmin-dotnet7.csproj" -c Release -o /app/build
 
 FROM build AS publish

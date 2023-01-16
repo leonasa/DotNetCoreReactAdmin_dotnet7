@@ -1,7 +1,9 @@
 version: '3.4'
 services:
-  mssql:
+  mssql-admin:
     image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-admin
+    hostname: mssql-admin
     ports: 
       - 1433:1433
     environment:
@@ -10,9 +12,11 @@ services:
   
   react-admin:
     image: pqx.react.admin
+    container_name: react-admin
+    hostname: react-admin
     ports: 
       - 80:44486
       - 443:44300
     build: app/DotNetCoreReactAdmin-dotnet7
     depends_on: 
-        - mssql   
+        -  mssql-admin   
