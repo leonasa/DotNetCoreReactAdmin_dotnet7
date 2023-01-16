@@ -12,6 +12,8 @@
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <RootNamespace>DotNetCoreReactAdmin_dotnet7</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2d05a130-c943-4f09-801e-753a8ea1760c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +21,8 @@
 	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
 	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.2" />
 	<PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24" />
   </ItemGroup>
