@@ -79,7 +79,8 @@ namespace DotNetCoreReactAdmin_dotnet7.Controllers
                 var sortVal = JsonConvert.DeserializeObject<List<string>>(sort);
                 var condition = sortVal.First();
                 var order = sortVal.Last() == "ASC" ? "" : "descending";
-                entityQuery = entityQuery.OrderBy($"{condition} {order}");
+                var ordering = $"{condition} {order}";
+                entityQuery = entityQuery.OrderBy(ordering);
             }
 
             // NOTE 取得範囲条件を元にデータの取得を行います。

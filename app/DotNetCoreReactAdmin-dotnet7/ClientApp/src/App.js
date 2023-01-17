@@ -6,7 +6,7 @@ import { UserList, UserEdit, UserCreate } from './Users'
 
 import Dashboard from './Dashboard';
 
-const dataProvider = simpleRestProvider('/');
+const dataProvider = simpleRestProvider('/api');
 const App = () => (
     <Admin dataProvider={dataProvider} dashboard={Dashboard}>
         <Resource name="user" icon={UserIcon} list={UserList} edit={UserEdit} create={UserCreate} />
